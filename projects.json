@@ -1,0 +1,24 @@
+[
+
+    {
+    "title": "MyTrainer-Bot",
+    "description": "Телеграм бот для подсчета КБЖУ (расчет отталкивается от веса, роста, возраста и пола)",
+    "status": "в работе",
+    "link": "#"
+    },
+
+    {
+    "title": "MyMinion_Bot",
+    "description": "Телеграм чат-бот с ИИ использующий языковую модель gemini",
+    "status": "в работе",
+    "link": "#"
+    },
+
+    {
+    "title": "Zahar-Ahar",
+    "description": "Мой сайт-портфолио",
+    "status": "сделано",
+    "link": "https://zahar-ahar.github.io/"
+    }
+
+]
