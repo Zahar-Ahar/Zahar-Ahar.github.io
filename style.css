@@ -14,6 +14,23 @@ body {
 
 }
 
+.buttonFilter {
+    /* Тоже сделал без ИИ */
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #f7e1c1fd;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(122, 102, 65, 0.6);
+    transition: .3s;
+}
+
+.buttonFilter:hover {
+    transform: scale(1.05);
+}
+
 #projects-list {
     /* Делал я (без ИИ) */
     display: flex;
@@ -43,6 +60,14 @@ body {
 
 .project-link {
     margin-top: auto;
+    text-decoration: none;
+    color: #5c4a2a;
+    font-weight: 550;
+    transition: .3s;
+}
+
+.project-link:hover {
+    color: rgb(153, 137, 92);
 }
 
 @media (max-width: 600px) {
