@@ -31,7 +31,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: auto;
     padding: 25px;
     min-height: 275px;
     width: calc((100% / 3) - (50px * 2 / 3));
@@ -42,6 +41,9 @@ body {
 
 }
 
+.project-link {
+    margin-top: auto;
+}
 
 @media (max-width: 600px) {
   .project-card {

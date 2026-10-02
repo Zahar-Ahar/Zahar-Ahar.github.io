@@ -11,7 +11,7 @@ function renderProjects(list) {
       <h3>${project.title}</h3>
       <p>${project.description}</p>
       <p>Статус: ${project.status}</p>
-      <a href="${project.link}">Открыть</a>
+      <a class="project-link" href="${project.link}">Открыть</a>
     `;
     container.appendChild(card);
   });
