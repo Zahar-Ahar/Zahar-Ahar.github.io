@@ -14,6 +14,12 @@ body {
 
 }
 
+.blockFilters {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+}
+
 .buttonFilter {
     /* Тоже сделал без ИИ */
     padding: 20px;
@@ -55,7 +61,7 @@ body {
     box-shadow: 0 10px 30px rgba(122, 102, 65, 0.6);
     background-color: #f7e1c1fd;
     cursor: pointer;
-
+    box-sizing: border-box;
 }
 
 .project-link {
