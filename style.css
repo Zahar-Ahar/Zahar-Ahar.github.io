@@ -37,7 +37,7 @@ body {
     transform: scale(1.05);
 }
 
-#projects-list {
+#projects-list, #tasks-list {
     /* Делал я (без ИИ) */
     display: flex;
     margin-top: 20px;
@@ -48,7 +48,7 @@ body {
     width: 100%;
 }
 
-.project-card {
+.project-card, .task-card {
     /* Тоже делал я без ИИ  */
     display: flex;
     flex-direction: column;
@@ -60,11 +60,10 @@ body {
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(122, 102, 65, 0.6);
     background-color: #f7e1c1fd;
-    cursor: pointer;
     box-sizing: border-box;
 }
 
-.project-link {
+.project-link, .task-link {
     margin-top: auto;
     text-decoration: none;
     color: #5c4a2a;
@@ -72,12 +71,16 @@ body {
     transition: .3s;
 }
 
-.project-link:hover {
+.project-link:hover , .task-link:hover {
     color: rgb(153, 137, 92);
 }
 
 @media (max-width: 600px) {
-  .project-card {
+  .project-card, .task-card {
     width: 100%;
+  }
+
+  body {
+    padding: 20px 15px;
   }
 }

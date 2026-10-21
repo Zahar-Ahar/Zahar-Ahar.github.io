@@ -3,7 +3,7 @@ function renderTasks(list) {
   container.innerHTML = '';
 
   list.forEach(task => {
-    const link = task.link ? `<a href="${task.link}">Смотреть на сайте</a>` : '';
+    const link = task.link ? `<a href="${task.link}" class="task-link">Смотреть на сайте</a>` : '';
     const card = document.createElement('div');
     card.className = 'task-card';
     card.innerHTML = `
@@ -17,10 +17,18 @@ function renderTasks(list) {
 }
 
 async function loadTasks() {
-  const response = await fetch('tasks.json');
-  const tasks = await response.json();
-  tasks.sort((a, b) => b.date.localeCompare(a.date));
-  renderTasks(tasks);
+    try {
+        const response = await fetch('tasks.json');
+        if (!response.ok) {
+            throw new Error('Json file error: ' + response.status);
+        }   
+        const tasks = await response.json();
+        tasks.sort((a, b) => b.date.localeCompare(a.date));
+        renderTasks(tasks);
+    } catch (error) {
+        document.getElementById('tasks-list').textContent = 'Загрузка задач не удалась. Попробуйте повторить позже.';
+        console.error(error);
+    }
 }
 
 function formatDate(iso) {
