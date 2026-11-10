@@ -67,7 +67,11 @@ function checkAnswer(answer, item, quiz) {
         score++;
         result.textContent = 'Верно!';
     } else {
-        result.textContent = 'Неверно.';
+     if (item.isScam) { 
+        result.textContent = 'Неверно, это скам';
+    } else {
+          result.textContent = 'Неверно, это не скам';
+      }
     }
     container.appendChild(result);
 

@@ -14,6 +14,13 @@ body {
 
 }
 
+.home-link {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
 .blockFilters {
     display: flex;
     gap: 20px;
