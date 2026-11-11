@@ -5,13 +5,14 @@ function renderProjects(list) {
   container.innerHTML = '';
 
   list.forEach(project => {
+    const link = project.link ? `<a href="${project.link}" class="project-link">Открыть</a>` : '';
     const card = document.createElement('div');
     card.className = 'project-card';
     card.innerHTML = `
       <h3>${project.title}</h3>
       <p>${project.description}</p>
       <p>Статус: ${project.status}</p>
-      <a class="project-link" href="${project.link}">Открыть</a>
+      ${link}
     `;
     container.appendChild(card);
   });
